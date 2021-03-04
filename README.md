@@ -4,3 +4,4 @@ All you need is python3 and vscode installed.
 
 # Suggestions
 - https://osherove.com/tdd-kata-1
+- https://docs.pytest.org/en/stable/assert.html
