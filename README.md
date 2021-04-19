@@ -5,6 +5,7 @@ All you need is python3 and vscode installed.
 # Suggestions
 - https://osherove.com/tdd-kata-1
 - https://docs.pytest.org/en/stable/assert.html
+- https://github.com/jonananas/tdd-workshop/blob/master/DotEnv_Mockito_Kata.md
 
 
 # Rules
