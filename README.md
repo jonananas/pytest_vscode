@@ -6,7 +6,7 @@ All you need is python3 and vscode installed.
 - https://osherove.com/tdd-kata-1
 - https://docs.pytest.org/en/stable/assert.html
 - https://docs.python.org/3/library/unittest.mock.html#unittest.mock.Mock.call_args
-- https://github.com/jonananas/tdd-workshop/blob/master/DotEnv_Mockito_Kata.md
+- [DotEnv_Mocker_kata.md](DotEnv_Mocker_kata.md)
 
 
 # Rules
