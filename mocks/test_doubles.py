@@ -1,9 +1,10 @@
 from os import path
 from fileio import FileIO
 
+
 class DotEnv:
 
-    def __init__(self, fileIO = FileIO()):
+    def __init__(self, fileIO=FileIO()):
         self.fileio: FileIO = fileIO
 
     def read(self, filename: str) -> dict:
@@ -23,8 +24,8 @@ class DotEnv:
 class FileIODummy(FileIO):
 
     def readlines(self, filename: str) -> list[str]:
-	    return None
-	
+        return None
+
     def writelines(self, filename: str, lines: list[str]):
         pass
 
@@ -32,8 +33,8 @@ class FileIODummy(FileIO):
 class FileIOStub(FileIO):
 
     def readlines(self, filename: str) -> list[str]:
-	    return ["key=value"]
-	
+        return ["key=value"]
+
     def writelines(self, filename: str, lines: list[str]):
         pass
 
@@ -44,8 +45,8 @@ class FileIOSpy(FileIO):
         self.writeCalled = False
 
     def readlines(self, filename: str) -> list[str]:
-	    return ["key=value"]
-	
+        return ["key=value"]
+
     def writelines(self, filename: str, lines: list[str]):
         self.writeCalled = True
 
@@ -56,11 +57,10 @@ class FileIOFake(FileIO):
         self.fileContents = list()
 
     def readlines(self, filename: str) -> list[str]:
-	    return self.fileContents
-	
+        return self.fileContents
+
     def writelines(self, filename: str, lines: list[str]):
         self.fileContents = lines
-
 
 
 class TestDoubles:
