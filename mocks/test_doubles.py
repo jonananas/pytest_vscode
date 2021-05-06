@@ -72,7 +72,7 @@ class TestDoubles:
 
     def test_should_read(self):
         dotEnv = DotEnv(FileIOStub())
-        assert dotEnv.read(".env") != None
+        assert dotEnv.read(".env") is not None
 
     def test_should_write(self):
         spy = FileIOSpy()

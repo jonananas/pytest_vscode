@@ -17,6 +17,8 @@ The kata:
   	2. Assert that the lines ["KEY=VALUE", "KEY2=VALUE2"] returns a dict with the keys KEY and KEY2.
 	3. Make sure exception is propagated when path cannot be found.
 		- Use ```mock.<method>.side_effect``` to tell fileIO to throw an exception
+		- Use pytest.raises to assert it (https://docs.pytest.org/en/6.2.x/assert.html)
+
  
 3. DotEnv write method should take a path to the file and a dict.
 	1. Make sure ```fileio.writeLines``` is called from ```DotEnv.write```
