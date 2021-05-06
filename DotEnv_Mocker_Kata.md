@@ -7,6 +7,8 @@ The kata:
 
 1. Create ```class DotEnv``` with a constructor that takes ```FileIO``` as parameter, 
 		ie ```__init__(self, fileIO=FileIO())```
+		assert that fileIO is intialized correctly
+		assert that mock can be injected
 
 2. DotEnv read method should take a path to the file and return a dict, 
 	1. When path is ".env", return "KEY=VALUE" from fileIO
