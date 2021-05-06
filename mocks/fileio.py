@@ -6,5 +6,4 @@ class FileIO:
 
     def writelines(self, filename: str, lines: list[str]):
         with open(filename, "w") as file:
-            for line in lines:
-                file.write(line)
+            file.writelines(lines)

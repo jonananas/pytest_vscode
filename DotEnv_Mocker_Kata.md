@@ -11,13 +11,15 @@ The kata:
 		assert that mock can be injected
 
 2. DotEnv read method should take a path to the file and return a dict, 
-	1. When path is ".env", return "KEY=VALUE" from fileIO
+	1. When path is ".env", return "KEY=VALUE\n" from fileIO
  		- Use ```mock.<method>.return_value``` to tell fileIO what to return
  		- assert that the dict returned by DotEnv is correct, ie get("KEY") should be "VALUE"
-  	2. Assert that the lines ["KEY=VALUE", "KEY2=VALUE2"] returns a dict with the keys KEY and KEY2.
+  	2. Assert that the lines ["KEY=VALUE\n", "KEY2=VALUE2\n"] returns a dict with the keys KEY and KEY2.
 	3. Make sure exception is propagated when path cannot be found.
 		- Use ```mock.<method>.side_effect``` to tell fileIO to throw an exception
 		- Use pytest.raises to assert it (https://docs.pytest.org/en/6.2.x/assert.html)
+	- Tip: @pytest.fixture(autouse=True) can be used to setup Test Class members
+
 
  
 3. DotEnv write method should take a path to the file and a dict.
@@ -25,7 +27,7 @@ The kata:
 		- Use ```mock.<method>.called```
 	2. Make sure path is passed to ```fileio.writeLines```
  		- Use ```mock.<method>.call_args```
-	3. Make sure the lines ["KEY=VALUE", "KEY2=VALUE2"] is passed to writeLines for a dict {"KEY": "VALUE", "KEY2": "VALUE2"}
+	3. Make sure the lines ["KEY=VALUE\n", "KEY2=VALUE2\n"] is passed to writeLines for a dict {"KEY": "VALUE", "KEY2": "VALUE2"}
 	4. Make sure exceptions is propagated when path cannot be written to.
 
 You are done! You may optionally run an integration test to prove the file is read and written correctly.
