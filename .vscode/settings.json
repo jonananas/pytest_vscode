@@ -6,6 +6,9 @@
         "./src",
         "./mocks"
     ],
+    "python.linting.pycodestyleArgs": [
+        "--ignore=E501"
+    ],
     "python.autoComplete.extraPaths": [
         "./src",
         "./mocks"
